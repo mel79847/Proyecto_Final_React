@@ -1,0 +1,1574 @@
+:root {
+  --green-dark: #124d2d;
+  --green: #2f963e;
+  --green-light: #73d13d;
+
+  --orange: #f3922f;
+  --orange-dark: #c85b1c;
+
+  --yellow: #ffd735;
+
+  --sky: #43baf0;
+  --sky-light: #9be4ff;
+
+  --grass: #4fb927;
+  --grass-light: #78d63d;
+
+  --cream: #fff2b9;
+
+  --wood: #8a4a21;
+  --wood-dark: #542910;
+
+  --white: #ffffff;
+}
+
+/* =========================================================
+   CARGA
+========================================================= */
+
+.pantalla-carga {
+  min-height: 100vh;
+
+  display: grid;
+  place-items: center;
+
+  color: white;
+
+  font-size: 1.4rem;
+  font-weight: 900;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--sky) 0 50%,
+      var(--grass-light) 50% 100%
+    );
+}
+
+/* =========================================================
+   INICIO
+========================================================= */
+
+.inicio-v3 {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  display: grid;
+  place-items: center;
+
+  padding: 30px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #41baf0 0%,
+      #8ee0ff 54%,
+      #72d43c 54%,
+      #46af28 100%
+    );
+}
+
+/* SOL */
+
+.sol-inicio {
+  position: absolute;
+
+  top: 65px;
+  right: 90px;
+
+  width: 125px;
+  height: 125px;
+
+  border-radius: 50%;
+
+  background: var(--yellow);
+
+  box-shadow:
+    0 0 0 13px rgba(255, 237, 128, 0.65);
+}
+
+/* NUBES */
+
+.nube-inicio {
+  position: absolute;
+
+  width: 140px;
+  height: 45px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.nube-inicio::before,
+.nube-inicio::after {
+  content: "";
+
+  position: absolute;
+
+  background: inherit;
+
+  border-radius: 50%;
+}
+
+.nube-inicio::before {
+  width: 64px;
+  height: 64px;
+
+  left: 16px;
+  bottom: 7px;
+}
+
+.nube-inicio::after {
+  width: 74px;
+  height: 74px;
+
+  right: 12px;
+  bottom: 3px;
+}
+
+.nube-1 {
+  top: 130px;
+  left: 90px;
+}
+
+.nube-2 {
+  top: 210px;
+  right: 310px;
+
+  transform: scale(0.75);
+}
+
+/* COLINAS */
+
+.colina {
+  position: absolute;
+
+  bottom: -100px;
+
+  border-radius: 50%;
+}
+
+.colina-1 {
+  left: -200px;
+
+  width: 700px;
+  height: 320px;
+
+  background: #369d31;
+}
+
+.colina-2 {
+  right: -250px;
+
+  width: 850px;
+  height: 350px;
+
+  background: #268d36;
+}
+
+/* ARBOLES DECORATIVOS */
+
+.arbol-decor {
+  position: absolute;
+
+  bottom: 40px;
+
+  width: 230px;
+  height: 330px;
+}
+
+.arbol-decor::before {
+  content: "";
+
+  position: absolute;
+
+  left: 93px;
+  bottom: 0;
+
+  width: 48px;
+  height: 165px;
+
+  border-radius: 40px;
+
+  background: #824819;
+}
+
+.arbol-decor::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 15px;
+
+  width: 190px;
+  height: 195px;
+
+  border-radius: 50%;
+
+  background: #23883d;
+
+  box-shadow:
+    75px 35px 0 #2f983d,
+    -50px 48px 0 #35a543,
+    25px -42px 0 #42a94a;
+}
+
+.arbol-1 {
+  left: -40px;
+}
+
+.arbol-2 {
+  right: -55px;
+
+  transform: scale(0.85);
+}
+
+/* CONTENIDO */
+
+.inicio-panel {
+  position: relative;
+
+  z-index: 10;
+
+  width: min(1080px, 94vw);
+
+  text-align: center;
+}
+
+.inicio-encabezado {
+  max-width: 760px;
+
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+
+  color: #155936;
+
+  font-size: 0.8rem;
+  font-weight: 1000;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+.inicio-encabezado h1 {
+  margin: 0;
+
+  color: #fff5b5;
+
+  font-size: clamp(4rem, 8vw, 7rem);
+
+  line-height: 0.85;
+
+  text-shadow:
+    0 6px 0 #d66a22,
+    0 10px 0 #83380f,
+    0 14px 20px rgba(0, 0, 0, 0.25);
+}
+
+.inicio-encabezado h2 {
+  margin: 18px 0 0;
+
+  color: white;
+
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+
+  text-shadow:
+    0 3px 0 rgba(0, 0, 0, 0.18);
+}
+
+.inicio-texto {
+  max-width: 700px;
+
+  margin: 18px auto 0;
+
+  color: #174a2d;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  line-height: 1.55;
+}
+
+/* JUGADORES */
+
+.inicio-jugadores {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 50px;
+
+  margin-top: 20px;
+}
+
+.inicio-jugador {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.inicio-jugador img {
+  width: 145px;
+  height: 165px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 12px 5px rgba(0, 0, 0, 0.2)
+    );
+}
+
+.inicio-jugador div {
+  text-align: left;
+}
+
+.inicio-jugador strong {
+  display: block;
+
+  color: #fff4a8;
+
+  font-size: 1.7rem;
+
+  text-shadow:
+    0 3px 0 #814019;
+}
+
+.inicio-jugador span {
+  display: block;
+
+  color: white;
+
+  font-size: 0.9rem;
+  font-weight: 900;
+
+  text-shadow:
+    0 2px 2px rgba(0, 0, 0, 0.18);
+}
+
+.inicio-versus {
+  display: grid;
+
+  width: 76px;
+  height: 76px;
+
+  place-items: center;
+
+  color: white;
+
+  font-size: 1.5rem;
+  font-weight: 1000;
+
+  background:
+    linear-gradient(
+      #f7a13a,
+      #d6671f
+    );
+
+  border: 6px solid white;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 7px 0 #923d14;
+}
+
+/* REGLAS */
+
+.inicio-reglas {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 15px;
+
+  flex-wrap: wrap;
+}
+
+.inicio-reglas article {
+  width: 145px;
+
+  padding: 11px;
+
+  background: rgba(16, 91, 47, 0.88);
+
+  border: 4px solid white;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 6px 0 rgba(8, 60, 31, 0.5);
+}
+
+.inicio-reglas article > span {
+  font-size: 1.5rem;
+}
+
+.inicio-reglas h3 {
+  margin: 4px 0 2px;
+
+  color: #ffe777;
+
+  font-size: 0.9rem;
+}
+
+.inicio-reglas p {
+  margin: 0;
+
+  color: white;
+
+  font-size: 0.7rem;
+
+  line-height: 1.3;
+}
+
+/* PUNTOS */
+
+.inicio-puntos {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 18px;
+}
+
+.inicio-puntos span {
+  padding: 7px 12px;
+
+  color: #613512;
+
+  font-size: 0.76rem;
+  font-weight: 900;
+
+  background: #fff4ad;
+
+  border: 3px solid white;
+
+  border-radius: 999px;
+}
+
+/* BOTÓN */
+
+.boton-principal {
+  padding: 13px 26px;
+
+  color: white;
+
+  font-weight: 1000;
+
+  background:
+    linear-gradient(
+      #f6a13a,
+      #d5631d
+    );
+
+  border: 5px solid white;
+
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 0 #943c14;
+
+  transition:
+    transform 0.12s ease;
+}
+
+.boton-principal:hover:not(:disabled) {
+  transform: translateY(-3px);
+}
+
+.boton-principal:disabled {
+  opacity: 0.7;
+
+  cursor: default;
+}
+
+.boton-grande {
+  margin-top: 20px;
+
+  min-width: 240px;
+}
+
+/* =========================================================
+   JUEGO
+========================================================= */
+
+.game-screen {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+
+  min-height: 650px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--sky) 0 47%,
+      var(--grass-light) 47% 100%
+    );
+}
+
+/* BORDE TIPO VIDEOJUEGO */
+
+.game-screen::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  pointer-events: none;
+
+  border: 10px solid var(--wood-dark);
+
+  box-shadow:
+    inset 0 0 0 6px #b66a2d;
+}
+
+/* =========================================================
+   HUD - UNA SOLA BARRA
+========================================================= */
+
+.game-hud {
+  position: absolute;
+
+  top: 20px;
+  left: 50%;
+
+  z-index: 100;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr minmax(390px, 1.2fr) 1fr;
+
+  align-items: center;
+
+  width: min(1120px, calc(100% - 180px));
+
+  min-height: 86px;
+
+  padding: 5px 16px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      #9a5625,
+      #6e3617
+    );
+
+  border: 6px solid #e7a547;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 7px 0 #4e270f,
+    0 12px 22px rgba(0, 0, 0, 0.22);
+}
+
+.hud-player {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 10px;
+
+  color: white;
+}
+
+.hud-player-right {
+  justify-content: flex-end;
+
+  text-align: right;
+}
+
+.hud-player img {
+  width: 64px;
+  height: 72px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 5px 2px rgba(0, 0, 0, 0.2)
+    );
+}
+
+.hud-player span {
+  display: block;
+
+  color: #ffe88c;
+
+  font-size: 0.72rem;
+  font-weight: 1000;
+
+  letter-spacing: 0.12em;
+}
+
+.hud-player strong {
+  display: block;
+
+  color: white;
+
+  font-size: 1.9rem;
+
+  line-height: 1;
+}
+
+.hud-player strong small {
+  color: #f7d48b;
+
+  font-size: 0.8rem;
+}
+
+/* TURNO CENTRAL */
+
+.hud-middle {
+  text-align: center;
+
+  color: white;
+
+  border-left: 2px solid rgba(255, 255, 255, 0.15);
+  border-right: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.hud-middle > small {
+  display: block;
+
+  color: #ffd76b;
+
+  font-size: 0.65rem;
+  font-weight: 1000;
+
+  letter-spacing: 0.13em;
+}
+
+.hud-middle h1 {
+  margin: 2px 0;
+
+  color: white;
+
+  font-size: 1.5rem;
+
+  text-shadow:
+    0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.hud-middle p {
+  margin: 2px 12px 0;
+
+  color: #fff0c2;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+/* =========================================================
+   BOTONES SUPERIORES
+========================================================= */
+
+.game-tools {
+  position: absolute;
+
+  top: 122px;
+  right: 25px;
+
+  z-index: 110;
+
+  display: flex;
+
+  gap: 8px;
+}
+
+.game-tools > button,
+.game-tools .musica button {
+  min-width: 46px;
+  height: 46px;
+
+  padding: 0 13px;
+
+  color: #693815;
+
+  font-weight: 1000;
+
+  background: #fff0a6;
+
+  border: 4px solid white;
+
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 0 #c28835;
+}
+
+/* =========================================================
+   BOSQUE
+========================================================= */
+
+.forest-board {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+}
+
+/* SOL */
+
+.sun {
+  position: absolute;
+
+  top: 145px;
+  right: 95px;
+
+  width: 115px;
+  height: 115px;
+
+  border-radius: 50%;
+
+  background: var(--yellow);
+
+  box-shadow:
+    0 0 0 12px rgba(255, 238, 134, 0.7);
+}
+
+/* NUBES */
+
+.cloud {
+  position: absolute;
+
+  width: 130px;
+  height: 42px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  animation:
+    cloudMove 11s ease-in-out infinite;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: inherit;
+}
+
+.cloud::before {
+  width: 58px;
+  height: 58px;
+
+  left: 16px;
+  bottom: 8px;
+}
+
+.cloud::after {
+  width: 65px;
+  height: 65px;
+
+  right: 10px;
+  bottom: 4px;
+}
+
+.cloud-one {
+  top: 155px;
+  left: 95px;
+}
+
+.cloud-two {
+  top: 205px;
+  right: 310px;
+
+  transform: scale(0.75);
+
+  animation-delay: -5s;
+}
+
+/* ÁRBOLES */
+
+.tree {
+  position: absolute;
+
+  width: 250px;
+  height: 360px;
+}
+
+.tree::before {
+  content: "";
+
+  position: absolute;
+
+  left: 97px;
+  bottom: 0;
+
+  width: 58px;
+  height: 175px;
+
+  border-radius: 35px;
+
+  background: #82461d;
+
+  box-shadow:
+    inset -13px 0 rgba(0, 0, 0, 0.13);
+}
+
+.tree::after {
+  content: "";
+
+  position: absolute;
+
+  top: 6px;
+  left: 22px;
+
+  width: 190px;
+  height: 195px;
+
+  border-radius: 50%;
+
+  background: #1d8c3e;
+
+  box-shadow:
+    80px 35px 0 #2a9b41,
+    -48px 52px 0 #34a848,
+    26px -38px 0 #41af4a;
+}
+
+/* La base queda EXACTAMENTE donde empieza el pasto */
+
+.tree-left {
+  left: -60px;
+  bottom: 53%;
+}
+
+.tree-right {
+  right: -70px;
+  bottom: 53%;
+
+  transform: scale(0.82);
+
+  transform-origin: bottom right;
+}
+
+/* ARBUSTOS */
+
+.bush {
+  position: absolute;
+
+  width: 190px;
+  height: 90px;
+
+  border-radius: 100px 100px 35px 35px;
+
+  background: #258a3c;
+
+  box-shadow:
+    80px -10px 0 #2f9c42,
+    150px 10px 0 #237e37;
+}
+
+.bush-one {
+  left: 20px;
+  bottom: 15px;
+}
+
+.bush-two {
+  right: 70px;
+  bottom: 15px;
+}
+
+/* CAMINO */
+
+.path {
+  position: absolute;
+
+  left: 50%;
+  bottom: -150px;
+
+  width: 460px;
+  height: 600px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      #edc46d,
+      #c98840
+    );
+
+  clip-path:
+    polygon(
+      45% 0,
+      55% 0,
+      88% 100%,
+      12% 100%
+    );
+}
+
+/* MANTA */
+
+.picnic-blanket {
+  position: absolute;
+
+  left: 50%;
+  top: 58%;
+
+  width: 255px;
+  height: 170px;
+
+  transform:
+    translate(-50%, -50%) rotate(-4deg);
+
+  border: 9px solid white;
+
+  border-radius: 18px;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 27px,
+      rgba(210, 55, 43, 0.2) 27px 54px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #ffedb1 0 27px,
+      #e95745 27px 54px
+    );
+
+  box-shadow:
+    0 12px 0 rgba(84, 61, 27, 0.2);
+}
+
+/* MARIPOSAS */
+
+.butterfly {
+  position: absolute;
+
+  z-index: 8;
+
+  font-size: 26px;
+
+  animation:
+    butterflyMove 4s ease-in-out infinite;
+}
+
+.butterfly-one {
+  top: 35%;
+  left: 39%;
+}
+
+.butterfly-two {
+  right: 29%;
+  bottom: 18%;
+
+  animation-delay: -2s;
+}
+
+/* =========================================================
+   ZONAS
+========================================================= */
+
+.map-zone {
+  position: absolute;
+
+  z-index: 30;
+
+  min-width: 290px;
+
+  color: white;
+}
+
+/* POSICIONES */
+
+.map-zone-roble {
+  top: 31%;
+  left: 10%;
+}
+
+.map-zone-manta {
+  top: 39%;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.map-zone-arbusto {
+  left: 13%;
+  bottom: 7%;
+}
+
+.map-zone-canasta {
+  right: 9%;
+  bottom: 7%;
+}
+
+/* LETRERO */
+
+.zone-sign {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  min-height: 48px;
+
+  padding: 7px 15px;
+
+  color: white;
+
+  font-weight: 1000;
+
+  text-transform: uppercase;
+
+  background:
+    linear-gradient(
+      #955726,
+      #653112
+    );
+
+  border: 4px solid #ffc75e;
+
+  border-radius: 13px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 0 #48200b,
+    0 10px 15px rgba(0, 0, 0, 0.2);
+
+  transition:
+    transform 0.12s ease;
+}
+
+.zone-sign:hover:not(:disabled) {
+  transform: translateY(-3px);
+}
+
+.zone-sign:disabled {
+  cursor: default;
+}
+
+.zone-sign > span {
+  font-size: 1.4rem;
+}
+
+.zone-sign strong {
+  font-size: 0.82rem;
+}
+
+.zone-sign small {
+  margin-left: 5px;
+
+  color: #ffe477;
+
+  font-size: 0.55rem;
+}
+
+/* ZONA ACTUAL */
+
+.current-zone .zone-sign {
+  background:
+    linear-gradient(
+      #f49a31,
+      #cd5b1b
+    );
+
+  border-color: #fff09a;
+
+  box-shadow:
+    0 6px 0 #92360f;
+}
+
+/* =========================================================
+   COMIDA
+========================================================= */
+
+.food-area {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 14px;
+}
+
+.food-item {
+  position: relative;
+
+  display: grid;
+
+  width: 88px;
+  height: 88px;
+
+  place-items: center;
+
+  padding: 7px;
+
+  background:
+    linear-gradient(
+      #fffde1,
+      #ffe992
+    );
+
+  border: 5px solid white;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 0 rgba(94, 76, 21, 0.28),
+    0 11px 18px rgba(0, 0, 0, 0.14);
+
+  transition:
+    transform 0.12s ease;
+}
+
+.food-item > span {
+  display: block;
+
+  font-size: 2.4rem;
+
+  line-height: 1;
+}
+
+.food-item > strong {
+  color: #633712;
+
+  font-size: 0.62rem;
+}
+
+.food-item > b {
+  position: absolute;
+
+  top: -9px;
+  right: -7px;
+
+  display: grid;
+
+  width: 30px;
+  height: 30px;
+
+  place-items: center;
+
+  color: white;
+
+  font-size: 0.7rem;
+
+  background: #ee7923;
+
+  border: 4px solid white;
+
+  border-radius: 50%;
+}
+
+.food-item > small {
+  position: absolute;
+
+  left: 50%;
+  bottom: -21px;
+
+  transform: translateX(-50%);
+
+  padding: 3px 7px;
+
+  color: white;
+
+  font-size: 0.52rem;
+  font-weight: 1000;
+
+  background: #167938;
+
+  border: 3px solid white;
+
+  border-radius: 999px;
+}
+
+.food-item:hover:not(:disabled) {
+  transform:
+    translateY(-5px) scale(1.07);
+}
+
+.food-item:disabled {
+  cursor: default;
+
+  opacity: 0.67;
+
+  filter: saturate(0.75);
+}
+
+.food-active {
+  animation:
+    foodPulse 1.5s ease-in-out infinite;
+}
+
+/* =========================================================
+   ROBAR
+========================================================= */
+
+.steal-button {
+  margin-top: 28px;
+
+  padding: 8px 13px;
+
+  color: white;
+
+  font-size: 0.65rem;
+  font-weight: 1000;
+
+  background:
+    linear-gradient(
+      #ef6042,
+      #bd3027
+    );
+
+  border: 4px solid white;
+
+  border-radius: 15px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 0 #862017;
+
+  animation:
+    stealPulse 1s ease-in-out infinite;
+}
+
+/* =========================================================
+   ARDILLAS
+========================================================= */
+
+.squirrel {
+  position: absolute;
+
+  z-index: 50;
+
+  width: 130px;
+
+  transition:
+    left 0.38s ease,
+    top 0.38s ease;
+}
+
+.squirrel img {
+  width: 125px;
+  height: 145px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 10px 5px rgba(0, 0, 0, 0.23)
+    );
+}
+
+.squirrel.playing img {
+  animation:
+    squirrelBounce 0.55s ease;
+}
+
+/* Separación entre jugadores si comparten zona */
+
+.squirrel-pip {
+  transform: translate(-78%, -50%);
+}
+
+.squirrel-poppy {
+  transform: translate(8%, -50%);
+}
+
+/* MISMAS CLASES QUE USA TU JSX */
+
+.pos-roble {
+  left: 27%;
+  top: 48%;
+}
+
+.pos-manta {
+  left: 50%;
+  top: 64%;
+}
+
+.pos-arbusto {
+  left: 27%;
+  top: 82%;
+}
+
+.pos-canasta {
+  left: 76%;
+  top: 82%;
+}
+
+/* FLECHA DE TURNO */
+
+.turn-arrow {
+  position: absolute;
+
+  top: -28px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: var(--yellow);
+
+  font-size: 2rem;
+
+  text-shadow:
+    0 3px 0 rgba(0, 0, 0, 0.35);
+
+  animation:
+    arrowBounce 0.7s ease-in-out infinite;
+}
+
+/* =========================================================
+   ERRORES
+========================================================= */
+
+.toast-error {
+  position: fixed;
+
+  right: 25px;
+  bottom: 25px;
+
+  z-index: 2000;
+
+  padding: 11px 16px;
+
+  color: white;
+
+  font-weight: 900;
+
+  background: #c93932;
+
+  border: 4px solid white;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 6px 0 #81221e;
+}
+
+/* =========================================================
+   RESULTADO
+========================================================= */
+
+.result-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 3000;
+
+  display: grid;
+  place-items: center;
+
+  background: rgba(10, 65, 29, 0.72);
+
+  backdrop-filter: blur(5px);
+}
+
+.result-box {
+  width: min(430px, 90%);
+
+  padding: 35px;
+
+  text-align: center;
+
+  background: #fff3b4;
+
+  border: 8px solid white;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 10px 0 #8b551c;
+}
+
+.result-box > span {
+  font-size: 4rem;
+}
+
+.result-box h2 {
+  margin: 5px 0;
+
+  color: #16502d;
+
+  font-size: 2.2rem;
+}
+
+.result-box p {
+  color: #67411f;
+}
+
+.result-box button {
+  margin-top: 12px;
+
+  padding: 11px 22px;
+
+  color: white;
+
+  font-weight: 1000;
+
+  background: #ef8c28;
+
+  border: 4px solid white;
+
+  border-radius: 999px;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   ANIMACIONES
+========================================================= */
+
+@keyframes squirrelBounce {
+  0% {
+    transform: translateY(5px);
+  }
+
+  55% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes arrowBounce {
+  0%,
+  100% {
+    transform:
+      translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform:
+      translateX(-50%) translateY(-7px);
+  }
+}
+
+@keyframes cloudMove {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(30px);
+  }
+}
+
+@keyframes butterflyMove {
+  0%,
+  100% {
+    transform:
+      translate(0, 0) rotate(-5deg);
+  }
+
+  50% {
+    transform:
+      translate(22px, -17px) rotate(10deg);
+  }
+}
+
+@keyframes foodPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+@keyframes stealPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.07);
+  }
+}
+
+/* =========================================================
+   PANTALLAS PEQUEÑAS
+========================================================= */
+
+@media (max-width: 950px) {
+  .game-hud {
+    width: calc(100% - 50px);
+
+    grid-template-columns:
+      100px 1fr 100px;
+  }
+
+  .hud-player img {
+    width: 48px;
+  }
+
+  .hud-middle {
+    min-width: 0;
+  }
+
+  .hud-middle p {
+    display: none;
+  }
+
+  .map-zone {
+    min-width: 230px;
+  }
+
+  .food-item {
+    width: 72px;
+    height: 72px;
+  }
+
+  .food-item > span {
+    font-size: 2rem;
+  }
+}

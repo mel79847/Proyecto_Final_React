@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  display: block;
+}
