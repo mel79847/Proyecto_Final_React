@@ -80,7 +80,12 @@ export default function Inicio({ cargando, onComenzar }: Props) {
           <span>🍪 Galleta · 3 puntos</span>
         </div>
 
-        <button className="boton-principal boton-grande" onClick={onComenzar} disabled={cargando}>
+        <button
+          className="boton-principal boton-grande"
+          data-testid="comenzar-partida"
+          onClick={onComenzar}
+          disabled={cargando}
+        >
           {cargando ? 'Preparando el bosque...' : 'Comenzar partida'}
         </button>
       </section>
