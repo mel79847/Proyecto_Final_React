@@ -1,0 +1,17 @@
+name: Deploy Render
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request deployment
+        env:
+          DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$DEPLOY_HOOK" ]; then
+            echo "Configure RENDER_DEPLOY_HOOK_URL en GitHub Secrets para activar el deploy."
+            exit 1
+          fi
+          curl -fsS -X POST "$DEPLOY_HOOK"

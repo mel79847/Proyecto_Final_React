@@ -20,10 +20,10 @@ export default function Inicio({ cargando, onComenzar }: Props) {
           <h1>Picnic Rush</h1>
           <h2>Ardillas al picnic</h2>
           <p className="inicio-texto">
-            Pip y Poppy recorren el parque buscando comida. En cada turno solo haces
-            una acción: <strong>moverte</strong> a otra zona o <strong>recoger</strong>{' '}
-            un alimento donde estás. La comida cambia en cada partida, así que siempre
-            hay algo distinto.
+            Pip y Poppy recorren el parque buscando comida. En tu turno puedes
+            <strong> moverte</strong>, <strong>recoger comida</strong> o, si encuentras
+            a tu rival en la misma zona, <strong>robarle 1 punto</strong>.
+            Gana quien llegue primero a 7 puntos.
           </p>
         </div>
 
@@ -67,9 +67,9 @@ export default function Inicio({ cargando, onComenzar }: Props) {
           </article>
 
           <article>
-            <span>✨</span>
-            <h3>Random</h3>
-            <p>La comida cambia de lugar en cada nueva partida.</p>
+            <span>🐾</span>
+            <h3>Robar</h3>
+            <p>Si ambos están en la misma zona, puedes quitarle 1 punto a tu rival.</p>
           </article>
         </div>
 
