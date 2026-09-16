@@ -16,7 +16,7 @@ export default function Inicio({ cargando, onComenzar }: Props) {
 
       <section className="inicio-panel">
         <div className="inicio-encabezado">
-          <p className="eyebrow">Proyecto final · React + Express</p>
+          <p className="eyebrow">Examen Final · React + Express</p>
           <h1>Picnic Rush</h1>
           <h2>Ardillas al picnic</h2>
           <p className="inicio-texto">
